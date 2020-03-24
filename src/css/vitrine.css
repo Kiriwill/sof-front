@@ -1,8 +1,9 @@
-
-.menu{
-    height: 40px;
+.listgroup_lista{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
 }
 
-.productsList{
-    height: 800px;
+.vitrine_item{
+    border: none;
 }

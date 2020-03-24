@@ -1,0 +1,28 @@
+.search_categories ul{
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 12px;
+}
+
+.search_categories {
+    font-size: 12px;
+}
+
+.search_item{
+    border: None;
+    margin:0;
+}
+
+.search_details{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search_details .card-text {
+    margin-top: 5px;
+    
+}
+
+.search_item, .find_details{
+    padding: 0;
+}

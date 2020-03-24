@@ -1,0 +1,37 @@
+
+
+.detalhes_page{
+    color: #525255;
+}
+
+.nav_button{
+    padding: 3px;
+    cursor: pointer;
+}
+
+.nav_button:hover  {
+    border: 1px solid #ffc107;
+}
+
+.nav_button:active  {
+    border: 1px solid #ffc107;
+}
+
+.product_picture{
+    margin-top: 2%;
+}
+
+.product_description {
+    padding-left: 5%;
+}
+
+.product_title {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.product_price{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+}

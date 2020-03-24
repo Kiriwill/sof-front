@@ -1,0 +1,38 @@
+.table_basket .card{
+    padding: 3% 5.5% 0% 5%;
+    width: 90%;
+}
+
+.table_basket .card th {
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.table_basket .card .figure {
+    padding-left: 14%;
+}
+
+.table_basket .table_basket_content{
+    padding-top: 3.5%;
+}
+
+.table_basket .table_basket_title p{
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.table_basket .table_basket_content .form-control{
+    width: 67px;
+    height: 40px;
+    padding-left: 15px;
+}
+
+
+
+.table_basket_price{
+    padding-top: 0rem;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: Helvetica, sans-serif;
+}   

@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import {Route, Router, BrowserRouter} from 'react-router-dom'
+import {Route, BrowserRouter} from 'react-router-dom'
 import Vitrine from './vitrine'
 import Detalhe from './detalhe'
+import Busca from './busca'
+import Cesta from './cesta'
 
 class RouteHandling extends Component {
     render() {
@@ -9,6 +11,8 @@ class RouteHandling extends Component {
             <BrowserRouter>
                 <Route exact path="/" component={Vitrine}/>
                 <Route path="/detalhes" component={Detalhe}/>
+                <Route path="/busca" component={Busca}/>       
+                <Route path="/cesta" component={Cesta}/>
             </BrowserRouter>
         )
     }

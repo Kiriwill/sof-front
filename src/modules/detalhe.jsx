@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Container, Row, Col, FormControl, Navbar, Nav, Form, NavDropdown, Tab} from 'react-bootstrap';
-
-import '../css/vitrine.css';
+import {Container, Row, Col, Figure, Card, ButtonGroup, Button} from 'react-bootstrap';
+import '../css/detalhe.css'
+import StoreHeader from './navigation'
 
 class Detalhe extends Component{
     
@@ -9,66 +9,58 @@ class Detalhe extends Component{
         //this.props.match.params.id
         return(
             <Container>
-                <Navbar bg="light" variant="light">
-                    <Form inline>
-                        <Navbar.Brand href="#home" style={{ marginLeft: '10px'}} >SOF</Navbar.Brand>
-                        <FormControl type="text" id="searcher" style={{ width: '30rem', marginLeft:'10rem' }} placeholder="Busque um produto"/>
-                    </Form>
-                </Navbar>
-                <Navbar bg="light" variant="light">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="/">Vitrine</Nav.Link>
-                        <NavDropdown title="Categorias" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Verduras</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Hortaliças</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Geléias</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Frutas</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                    <Nav>
-                        <Nav.Link href="/">Entrar</Nav.Link>
-                        <Nav.Link href="#home">Meu carrinho</Nav.Link>
-                    </Nav>
-                </Navbar>   
-                <Row className="productsTitle">
-                    <Col md="10">
-                        Vitrine > Brocolis Ninja
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md="2">
-                        <Tab.Container defaultActiveKey="first">
+                    <StoreHeader></StoreHeader>
+                    <Row className="products_title">
+                        <Col md="10" className="path_header">
+                            Vitrine > Brocolis Ninja
+                        </Col>
+                    </Row>
+                    <Row className="detalhes_page">
+                        <Col md="2">
                             <Row>
-                                <Col md={3}>
-                                    <Nav variant="pills" >
-                                        <Nav.Item>
-                                            <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                                                </Nav.Item>
-                                                <Nav.Item>
-                                            <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                                        </Nav.Item>
-                                    </Nav>
-                                </Col>
-                                <Col md={9}>
-                                    <Tab.Content>
-                                        <Tab.Pane eventKey="first">
-                                        
-                                        </Tab.Pane>
-                                        <Tab.Pane eventKey="second">
-                                        
-                                        </Tab.Pane>
-                                    </Tab.Content>
+                                <Col md="8">
+                                    <Figure className="nav_button">
+                                        <Figure.Image
+                                            src="images/brocoli.jpg"
+                                        />
+                                    </Figure>
+                                    <Figure className="nav_button">
+                                        <Figure.Image
+                                            src="images/brocoli.jpg"
+                                        />
+                                    </Figure>
                                 </Col>
                             </Row>
-                        </Tab.Container>
-                    </Col>
-                    <Col md="6">
-                        Ho
-                    </Col>
-                    <Col md="4">
-                        Lets Go
-                    </Col>
-                </Row>
+                        </Col>
+                        <Col md="4" className="product_picture">
+                            <Figure>
+                                <Figure.Image
+                                    width={400}
+                                    height={200}
+                                    alt="171x180"
+                                    src="images/brocoli.jpg"
+                                />
+                            </Figure>
+                            <Card>
+                                <Card.Body>
+                                    <Card.Title>Informações do produto</Card.Title>
+                                    <Card.Text>Brocólis orgânico in natura.</Card.Text>
+                                    <Card.Text>NÃO CONTÉM GLUTÉN.</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col md="6" className="product_description">
+                            <Card.Title className="product_title">Brocólis Ninja In Natura - Grupo Esperança</Card.Title>
+                            <Card.Text>
+                                Tipo de produto: in natura <br/>
+                                Unidade: Kg</Card.Text> 
+                            <Card.Text className="product_price">R$ 4,00</Card.Text>
+                            <ButtonGroup>
+                                <Button variant="warning">Comprar</Button>
+                                <Button variant="outline-warning">Adicionar ao carrinho</Button>
+                            </ButtonGroup>
+                        </Col>
+                    </Row>
             </Container>
         )
     }
